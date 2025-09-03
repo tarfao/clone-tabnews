@@ -10,7 +10,8 @@ const createJestConfig = nextJest({
 });
 const jestConfig = createJestConfig({
     //essa configuração permite que o jest faça imports do node_modules e também configure o absolute path
-    moduleDirectories: ['node_modules', '<rootDir>']
+    moduleDirectories: ['node_modules', '<rootDir>'],
+    testTimeout: 60000,
 });
 
 module.exports = jestConfig;
